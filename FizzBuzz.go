@@ -32,15 +32,3 @@ func fizzBuzz(input int) {
 		fmt.Println("None")
 	}
 }
-
-// func fizzBuzz(num int) {
-// 	if num%5 == 0 && num%3 == 0 {
-// 		fmt.Println("Fizz Buzz!")
-// 	} else if num%5 == 0 {
-// 		fmt.Println("Fizz")
-// 	} else if num%3 == 0 {
-// 		fmt.Println("Buzz")
-// 	} else {
-// 		fmt.Println("None")
-// 	}
-// }
