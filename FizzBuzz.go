@@ -18,7 +18,7 @@ func main() {
 	}
 	input = strings.TrimSuffix(input, "\n'")
 	strconv.ParseInt(input, 10, 32)
-	fizzBuzz()
+	fizzBuzz(input)
 }
 
 func fizzBuzz(input int) {
