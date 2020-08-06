@@ -5,23 +5,21 @@ import (
 	"fmt"
 	"os"
 	"strconv"
-	"strings"
 )
 
 func main() {
-
+	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Print("Enter a num: ")
-	reader := bufio.NewReader(os.Stdin)
-	input, err := reader.ReadString('\n')
+	scanner.Scan()
+	input, err := strconv.ParseInt(scanner.Text(), 10, 32)
 	if err != nil {
 		fmt.Println(err)
 	}
-	input = strings.TrimSuffix(input, "\n'")
-	strconv.ParseInt(input, 10, 32)
+
 	fizzBuzz(input)
 }
 
-func fizzBuzz(input int) {
+func fizzBuzz(input int64) {
 	if input%5 == 0 && input%3 == 0 {
 		fmt.Println("Fizz Buzz!")
 	} else if input%5 == 0 {
